@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = '<your-dockerhub-username>/my-python-app:latest' // Replace with your Docker Hub username
+        DOCKER_IMAGE = 'mounikarangisetty/app:latest' 
     }
 
     stages {
@@ -33,7 +33,7 @@ pipeline {
 
     post {
         always {
-            cleanWs() // Cleans up the workspace after the job is done
+            cleanWs() 
         }
     }
 }
