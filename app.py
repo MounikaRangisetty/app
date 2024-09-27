@@ -1,14 +1,18 @@
-from flask import Flask
 import logging
+from flask import Flask
 
 app = Flask(__name__)
 
-# Set up logging to a file
-logging.basicConfig(filename='/var/log/myapp/flask.log', level=logging.INFO)
+# Set up logging
+logging.basicConfig(
+    filename='/var/log/myapp/flask.log', 
+    level=logging.INFO,
+    format='%(asctime)s %(levelname)s: %(message)s'
+)
 
 @app.route('/')
-def hello():
-    app.logger.info("Accessed '/' route")
+def index():
+    app.logger.info('Home page accessed')
     return "Hello, World!"
 
 if __name__ == '__main__':
