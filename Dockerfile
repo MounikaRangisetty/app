@@ -3,14 +3,17 @@ FROM python:3.8-slim
 
 WORKDIR /app
 
-# Copy app files to container
+# Copy application files to container
 COPY . /app
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose port 80
-EXPOSE 80
+# Create log directory
+RUN mkdir -p /var/log/myapp
+
+# Expose port 8000
+EXPOSE 8000
 
 # Run the application
 CMD ["python", "app.py"]
