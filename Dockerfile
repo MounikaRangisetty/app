@@ -25,7 +25,7 @@ EXPOSE 5000
 # Ensure this matches the port used in app.run()
 
 # Add a health check to ensure the container is running correctly
-HEALTHCHECK CMD curl --fail http://localhost:4000/health || exit 1
+HEALTHCHECK CMD curl --fail http://localhost:5000/health || exit 1
 
 # Set the default command to run the application
 CMD ["python", "addition.py"]
