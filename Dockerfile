@@ -25,7 +25,7 @@ EXPOSE 4001
 # Ensure this matches the port used in app.run()
 
 # Add a health check to ensure the container is running correctly
-HEALTHCHECK CMD curl --fail http://43.203.121.184:4000/health || exit 1
+HEALTHCHECK CMD curl --fail http://43.203.121.184:4001/health || exit 1
 
 # Set the default command to run the application
 CMD ["python", "addition.py"]
