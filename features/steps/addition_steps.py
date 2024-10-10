@@ -1,7 +1,7 @@
 from behave import given, when, then
 import requests
 
-BASE_URL = 'http://43.203.121.184:4000'
+BASE_URL = 'http://43.203.121.184:4001'
 
 @given('the application is running')
 def step_impl(context):
