@@ -21,7 +21,7 @@ ENV APP_ENV=production
 ENV DEBUG=False
 
 # Expose the port the app will run on (adjust if necessary)
-EXPOSE 4000  
+EXPOSE 4001  
 # Ensure this matches the port used in app.run()
 
 # Add a health check to ensure the container is running correctly
